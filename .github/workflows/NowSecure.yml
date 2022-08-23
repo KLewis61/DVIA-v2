@@ -20,3 +20,4 @@ jobs:
           code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
           team-id: ${{ secrets.TEAM_ID }}
           workspace-path: DVIA-v2.xcworkspace # optional
+          certificate-password: ${{ secrets.CERTIFICATE_PASSWORD }}
