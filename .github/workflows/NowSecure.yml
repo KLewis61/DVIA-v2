@@ -1,0 +1,22 @@
+name: "NowSecure"
+
+on:
+  workflow_dispatch:
+    branches: [ main ]
+    
+    
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - uses: yukiarrr/ios-build-action@v1.5.0
+         with:
+          project-path: DVIA-v2.xcodeproj
+          p12-base64: ${{ secrets.P12_BASE64 }}
+          mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
+          code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
+          team-id: ${{ secrets.TEAM_ID }}
+          workspace-path: DVIA-v2.xcworkspace # optional
