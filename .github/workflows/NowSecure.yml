@@ -22,5 +22,6 @@ jobs:
           team-id: ${{ secrets.TEAM_ID }}
           workspace-path: DVIA-v2.xcworkspace # optional
           certificate-password: ${{ secrets.CERTIFICATE_PASSWORD }}
-          configuration: Debug
+          configuration: "Debug"
+          export-method: "ad-hoc"
           
