@@ -45,7 +45,6 @@ jobs:
       
       - name: NowSecure
         uses: nowsecure/nowsecure-action@v1
-        minimum-severity: low # Can be one of [critical, high, medium, low, info]
         timeout-minutes: 90
         with:
          token: ${{ secrets.NS_TOKEN }}
