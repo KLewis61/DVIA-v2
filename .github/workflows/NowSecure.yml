@@ -25,3 +25,37 @@ jobs:
           configuration: "Release"
           export-method: "ad-hoc"
           
+      - name: Upload application
+        uses: actions/upload-artifact@v2
+        with:
+          name: app
+          path: /Users/runner/work/DVIA-v2/DVIA-v2/output.ipa
+          retention-days: 3
+		  
+		  
+  scan:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Download application
+        uses: actions/download-artifact@v2
+        with:
+          name: app
+		  
+      - name: NowSecure
+        uses: nowsecure/nowsecure-action@v1
+        minimum-severity: low # Can be one of [critical, high, medium, low, info]
+        timeout-minutes: 90
+        with:
+         token: ${{ secrets.NS_TOKEN }}
+         app_file: output.ipa		# REPLACE: The path to an .ipa or .apk
+         group_id: $GROUP_ID				# REPLACE: NowSecure Group ID
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+         path: NowSecure.sarif
+          
