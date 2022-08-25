@@ -38,21 +38,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
+      - name: Install ripgrep
+        run: sudo apt-get install -y ripgrep
+        
       - name: Download application
         uses: actions/download-artifact@v2
         with:
           name: app
       
       - name: NowSecure
-        uses: nowsecure/nowsecure-action@v1
+        uses: nowsecure/nowsecure-action/convert-sarif@main
         timeout-minutes: 90
         with:
          token: ${{ secrets.NS_TOKEN }}
          app_file: output.ipa		# REPLACE: The path to an .ipa or .apk
          group_id: ${{ secrets.GROUP_ID }}				# REPLACE: NowSecure Group ID
+         enable_dependencies: false
+         enable_sarif: true
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
+        uses: github/codeql-action/upload-sarif@v2
         with:
          path: NowSecure.sarif
           
