@@ -30,8 +30,7 @@ jobs:
         with:
           name: app
           path: /Users/runner/work/DVIA-v2/DVIA-v2/output.ipa
-          retention-days: 3
-	  
+          retention-days: 3  
   scan:
     runs-on: ubuntu-latest
     needs: build
