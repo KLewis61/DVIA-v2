@@ -52,7 +52,7 @@ jobs:
         with:
          token: ${{ secrets.NS_TOKEN }}
          app_file: output.ipa		# REPLACE: The path to an .ipa or .apk
-         group_id: $GROUP_ID				# REPLACE: NowSecure Group ID
+         group_id: ${{ secrets.GROUP_ID }}				# REPLACE: NowSecure Group ID
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
