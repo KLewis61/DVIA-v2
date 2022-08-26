@@ -1,1 +1,1 @@
-minimum-severity: low. # Can be one of [critical, high, medium, low, info]
+minimum-severity: low # Can be one of [critical, high, medium, low, info]
