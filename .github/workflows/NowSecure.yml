@@ -78,11 +78,12 @@ jobs:
         with:
           report_id: ${{ needs.scan.outputs.report_id }}
           token: ${{ secrets.NS_TOKEN }}
+          poll_interval_ms: 600000
           # TODO: Replace the Group ID.
           group_id: "602abed9-4c66-453d-8431-da0195b682de"
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
+        uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: NowSecure.sarif
 
