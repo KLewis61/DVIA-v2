@@ -25,6 +25,7 @@
 		6EF0C423206234BD0089050C /* TouchIDAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0C422206234BD0089050C /* TouchIDAuthentication.m */; };
 		6EFF445D206CD4D7007BE6C6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFF445C206CD4D7007BE6C6 /* menu.png */; };
 		6EFF445F206CFA20007BE6C6 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFF445E206CFA20007BE6C6 /* back.png */; };
+		A71540B22910630300815F52 /* NotSecure.plist in Resources */ = {isa = PBXBuildFile; fileRef = A71540B12910630300815F52 /* NotSecure.plist */; };
 		F65219E5205A56CB00D0A345 /* ExcessivePermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */; };
 		F65219E9205A599C00D0A345 /* ExcessivePermissions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65219E8205A599B00D0A345 /* ExcessivePermissions.storyboard */; };
 		F65A37F420652EF3005966DA /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F65A37F320652EF3005966DA /* DeviceInfo.m */; };
@@ -231,6 +232,7 @@
 		6EFF445C206CD4D7007BE6C6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		6EFF445E206CFA20007BE6C6 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		92BBC104309970BC081E4760 /* Pods_DVIA_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVIA_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A71540B12910630300815F52 /* NotSecure.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NotSecure.plist; sourceTree = "<group>"; };
 		C9FAF81124FA42DB50364D82 /* Pods-DVIA-v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVIA-v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVIA-v2/Pods-DVIA-v2.release.xcconfig"; sourceTree = "<group>"; };
 		F65219E4205A56CB00D0A345 /* ExcessivePermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcessivePermissionsViewController.swift; sourceTree = "<group>"; };
 		F65219E8205A599B00D0A345 /* ExcessivePermissions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExcessivePermissions.storyboard; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 				F6DE6F40202FA4DE00A3A757 /* Vulnerabilities */,
 				F65AC871202FA37500E4088A /* DVIA_v2.xcdatamodeld */,
 				F6DE6F24202FA4DC00A3A757 /* DVIA-v2-Bridging-Header.h */,
+				A71540B12910630300815F52 /* NotSecure.plist */,
 			);
 			path = "DVIA-v2";
 			sourceTree = "<group>";
@@ -1628,6 +1631,7 @@
 				6E38A9822062669E00C9B563 /* AntiAntiHookingDebugging.storyboard in Resources */,
 				F6ED006D206F8337000D1E99 /* slider-bg.png in Resources */,
 				F6C8AA29205D32B7001E1CCB /* TouchIDBypass.storyboard in Resources */,
+				A71540B22910630300815F52 /* NotSecure.plist in Resources */,
 				6EFF445F206CFA20007BE6C6 /* back.png in Resources */,
 				F6E645B3202FBC6000884A43 /* RuntimeManipulation.storyboard in Resources */,
 				F6E645D2202FBC6000884A43 /* BrokenCryptography.storyboard in Resources */,
